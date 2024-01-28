@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MadhushiUdeshika.github.io/MadhushiUdeshika.github.io",
+  "homepage": "https://MadhushiUdeshika.github.io",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "*",
     "@emailjs/browser": "^3.11.0",
