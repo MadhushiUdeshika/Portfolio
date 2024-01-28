@@ -93,12 +93,6 @@ const Date = styled.div`
     }
 `
 
-const ItemWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-`
-
 const BlogCard = ({ blog }) => {
     return (
         <Card>

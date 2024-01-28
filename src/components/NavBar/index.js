@@ -1,10 +1,10 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavBarStyle'
-import { DiCssdeck } from 'react-icons/di';
+import { Nav, NavLink, NavbarContainer, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from './NavBarStyle'
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+import { Link } from 'react-router-dom';
+import Logo from '../../images/Logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,9 +13,9 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20px;', cursor: 'pointer' }}>
-            <img src="/images/Logo.png" alt="Logo" style={{ width: '3rem', marginRight: '10px' }} /> 
-          </a>
+          <Link to='/' style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20px', cursor: 'pointer' }}>
+            <img src={ Logo } alt="Logo" style={{ width: '10rem', marginRight: '10px' }} /> 
+          </Link>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {
