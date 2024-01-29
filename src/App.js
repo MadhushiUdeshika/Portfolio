@@ -7,7 +7,7 @@ import { HashRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/index.js";
 import Footer from "./components/Footer";
 import Blogs from "./components/Blogs";
 import Education from "./components/Education";
