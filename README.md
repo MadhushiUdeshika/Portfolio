@@ -1,4 +1,9 @@
-# Table of Contents
+# My Portfolio
+Welcome to my portfolio! This project showcases my skills, projects, and background as a web developer.
+
+### Web Link: [Live Website](https://madhushiudeshika.github.io/Portfolio/)
+
+## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -28,8 +33,8 @@ My Portfolio is a React.js application that serves as an online portfolio to sho
 ## Installation
 To run this portfolio locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/MadhushiUdeshika/MadhushiUdeshika.github.io.git`
-2. Navigate to the project directory: `cd MadhushiUdeshika.github.io.git`
+1. Clone the repository: `git clone https://github.com/MadhushiUdeshika/Portfolio.git`
+2. Navigate to the project directory: `cd Portfolio`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
 5. Open your browser and visit: [http://localhost:3000](http://localhost:3000)
