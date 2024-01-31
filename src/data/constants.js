@@ -163,6 +163,14 @@ export const Bio = {
       date: "2020 - current",
       desc: "I am currently pursuing a Bachelors degree in Computing & Information Systems at Sabaragamuwa University of Sri Lanka. I have completed 5 semesters and have a GPA of 3.05. I have taken courses in Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Design Patterns, among others.",
       degree: "Bsc (Hons) in Computing & Information Systems",
+    },
+    {
+      id: 1,
+      img: "https://yt3.googleusercontent.com/s0D-gsl0hQKkOCttLbq9z1Ma8HDpUWOxg_3HcLxg3XhlSuhHFEZwsQmAxKJivKC9VE-_o5jdyKA=s900-c-k-c0x00ffffff-no-rj",
+      school: "SITC Campus",
+      date: "2021",
+      desc: "Embarked on a journey of knowledge through a diploma program, equipping me with fundamental insights that not only broaden my understanding of human behavior but also empower me to contribute meaningfully to societal well-being.",
+      degree: "Diploma in Psychology & Couselling"
     }
   ];
   

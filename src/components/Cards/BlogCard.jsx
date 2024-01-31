@@ -107,7 +107,7 @@ const BlogCard = ({ blog }) => {
                 {blog?.desc && <Span>{blog?.desc}</Span>}
             </Description>
             {blog?.link &&
-                <a href={blog?.link} target="_blank" rel="noopener noreferrer">
+                <a href={blog?.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 Read more
                 </a>
             }
