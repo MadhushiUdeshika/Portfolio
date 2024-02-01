@@ -125,7 +125,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_9slntmk', '__ejs-test-mail-service__', form.current, 'yebohAMjhW4Xi35Is')
+    emailjs.sendForm('service_9slntmk', 'contact_form', form.current, 'yebohAMjhW4Xi35Is')
       .then((result) => {
         setOpen(true);
         form.current.reset();
