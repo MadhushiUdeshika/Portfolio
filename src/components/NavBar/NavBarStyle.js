@@ -86,14 +86,18 @@ export const GitHubButton = styled.a`
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
-    :hover {
-      background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};     
-    }
-    @media screen and (max-width: 768px) { 
+
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
+
+  @media screen and (max-width: 768px) {
     font-size: 14px;
-    }
+    padding: 0 14px; /* Adjust padding for smaller screens */
+  }
 `;
+
 
 export const ButtonContainer = styled.div`
   width: 80%;  
@@ -106,7 +110,6 @@ export const ButtonContainer = styled.div`
     display: none;
   }
 `;
-
 
 export const MobileIcon = styled.div`
   display: none;

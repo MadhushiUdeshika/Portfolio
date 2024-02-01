@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 
@@ -117,17 +117,23 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  transition: background 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+
+  &:active {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
 `
 
 const Contact = () => {
-  const [ setOpen] = useState(false);
+ 
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_9slntmk', 'contact_form', form.current, 'yebohAMjhW4Xi35Is')
       .then((result) => {
-        setOpen(true);
+        
         form.current.reset();
       }, (error) => {
         console.log(error.text);
