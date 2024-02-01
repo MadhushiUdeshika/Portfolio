@@ -141,12 +141,13 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput placeholder="Your Email" name="from_email" autocomplete="email" />
+          <ContactInput placeholder="Your Name" name="from_name" autocomplete="name" />
+          <ContactInput placeholder="Subject" name="subject" autocomplete="subject" />
+          <ContactInputMessage placeholder="Message" rows="4" name="message" autocomplete="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
+
       </Wrapper>
     </Container>
   );
