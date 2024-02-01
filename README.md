@@ -1,7 +1,7 @@
 # My Portfolio
 Welcome to my portfolio! This project showcases my skills, projects, and background as a web developer.
 
-### Web Link: [Live Website](https://madhushiudeshika.github.io/Portfolio/)
+### Web Link: [Live Website](https://madhu-udeshika.netlify.app/)
 
 ## Table of Contents
 - [Introduction](#introduction)
