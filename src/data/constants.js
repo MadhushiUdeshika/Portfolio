@@ -139,6 +139,14 @@ export const Bio = {
   export const blogs = [
     {
       id: 0,
+      img: "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*u_VncXP05SW3sF19",
+      title: "Exploring the Metaverse: How AI Shapes Our Virtual Future?",
+      date: "01/02/2024",
+      desc: "AI paints the Metaverse: lifelike avatars, personalized journeys, dynamic worlds, seamless communication, and everyone can create - shaping a future of connection, imagination, and humanity.",
+      link: "https://medium.com/@madhu-udeshika/exploring-the-metaverse-how-ai-shapes-our-virtual-future-33549364bd0e",
+    },
+    {
+      id: 1,
       img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*KzveWowPJP2O9629.jpg",
       title: "Unleashing the Power of Brain-Inspired Chips: How Neuromorphic Computing is Transforming Our World?",
       date: "07/01/2024",
@@ -146,7 +154,7 @@ export const Bio = {
       link: "https://medium.com/@madhu-udeshika/unleashing-the-power-of-brain-inspired-chips-how-neuromorphic-computing-is-transforming-our-world-135f4ca8256e",
     },
     {
-      id: 1,
+      id: 2,
       img: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*zvs-xWrjbd1lVGE-.jpg",
       title: "Human Touch in the Machine Age: How empathy can make AI better for everyone?",
       date: "02/01/2024",
