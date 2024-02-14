@@ -126,13 +126,13 @@ export const Bio = {
   
     {
       id: 2,
-      title: "ERP System",
+      title: "Employee Management System",
       description:
-        "Streamline and integrate various business processes, from inventory management to customer relations, enhancing overall efficiency and productivity.",
+        "A simple employee management application developed with React, enabling users to manage employee information efficiently by providing functionality to create, read, update, and delete employee records.",
       image:
         "https://blogimages.softwaresuggest.com/blog/wp-content/uploads/2023/01/24171416/Benefits-of-ERP-Advantages-Disadvantages-of-ERP-Systems_feature.jpg",
-      tags: ["Java", "MySQL"],
-      github: "https://github.com/MadhushiUdeshika/ERP.git"
+      tags: ["React", "HTML", "CSS", "Javascript"],
+      github: "https://github.com/MadhushiUdeshika/Employee-Management.git"
     },
   ];
   
