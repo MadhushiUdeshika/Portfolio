@@ -124,21 +124,45 @@ const ContactButton = styled.input`
     color: ${({ theme }) => theme.white};
   }
 `
+const Toast = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: ${({ type }) => (type === "success" ? "#4BB543" : "#FF5C5C")};
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  z-index: 100;
+  opacity: ${({ message }) => (message ? 1 : 0)};
+  transform: translateY(${({ message }) => (message ? "0" : "20px")});
+  transition: all 0.3s ease-in-out;
+`;
 
 const Contact = () => {
  
   const form = useRef();
 
+  const [toast, setToast] = React.useState({ message: "", type: "" });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_9slntmk', 'contact_form', form.current, 'yebohAMjhW4Xi35Is')
-      .then((result) => {
-        
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs.sendForm('service_8mcndtv', 'template_t4qrcsk', form.current, 'yebohAMjhW4Xi35Is')
+      .then(
+        (result) => {
+          form.current.reset();
+          setToast({ message: "Your message has been sent successfully! 🎉", type: "success" });
+          setTimeout(() => setToast({ message: "", type: "" }), 4000); // hide after 4s
+        },
+        (error) => {
+          console.log(error.text);
+          setToast({ message: "Oops! Something went wrong. Please try again.", type: "error" });
+          setTimeout(() => setToast({ message: "", type: "" }), 4000);
+        }
+      );
   };
+
 
   return (
     <Container>
@@ -147,13 +171,13 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" autocomplete="email" />
-          <ContactInput placeholder="Your Name" name="from_name" autocomplete="name" />
-          <ContactInput placeholder="Subject" name="subject" autocomplete="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" autocomplete="message" />
+          <ContactInput placeholder="Your Name" name="user_name" autocomplete="name" />
+          <ContactInput placeholder="Your Email" name="user_email" autocomplete="email" />          
+          <ContactInput placeholder="Subject" name="user_subject" autocomplete="subject" />
+          <ContactInputMessage placeholder="Message" rows="4" name="user_message" autocomplete="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-
+        {toast.message && <Toast type={toast.type} message={toast.message}>{toast.message}</Toast>}
       </Wrapper>
     </Container>
   );

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { FaMedium } from "react-icons/fa";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Bio } from '../../data/constants';
 
 const FooterContainer = styled.div`
@@ -93,13 +95,16 @@ function Footer() {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#blogs">Blogs</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#career">Career</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.medium} target="display"><FaMedium /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.github} target="display"><GitHubIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 Madhushi Udeshika. All rights reserved.
+          &copy; 2025 Madhushi Udeshika. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

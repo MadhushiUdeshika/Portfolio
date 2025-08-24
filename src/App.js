@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact/index.js";
 import Footer from "./components/Footer";
 import Blogs from "./components/Blogs";
+import Careers from "./components/Career";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
@@ -42,6 +43,11 @@ function App() {
           </Wrapper>
           <Wrapper>
             <Education />
+          </Wrapper>
+          <Wrapper>
+            <Careers />
+          </Wrapper>
+          <Wrapper>
             <Contact />
           </Wrapper>
           <Footer />

@@ -12,7 +12,7 @@ const Description = styled.div`
         font-size: 12px;
     }
 `
-const BlogSubtitle = styled.p`
+const CareerSubtitle = styled.p`
   font-style: italic;
   font-size: 13px;
   color: ${({ theme }) => theme.text_secondary};
@@ -89,29 +89,70 @@ const Title = styled.h2`
     font-size: 14px;
   }
 `
+const Role = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-top: 4px;
+`;
+
+const Date = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + 80};
+  margin-top: 2px;
+`;
+
+const Modules = styled.div`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+const Module = styled.span`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_secondary};
+`;
 
 
-const BlogCard = ({ blog }) => {
+const CareerCard = ({ career }) => {
     return (
         <Card>
             <Top>
-                <Image src={blog?.img} />
+                <Image src={career?.img} />
                 <Body>
-                    <Title>{blog?.title}</Title>
-                    {blog.subtitle && <BlogSubtitle>{blog.subtitle}</BlogSubtitle>}
+                    <Title>{career?.title}</Title>
+                    {career?.subtitle && <CareerSubtitle>{career.subtitle}</CareerSubtitle>}
+                    {career?.role && <Role>{career.role}</Role>} {/* optional role */}
+                    {career?.date && <Date>{career.date} {career?.location && `· ${career.location}`}</Date>}
                 </Body>
             </Top>
-            
-            <Description>
-                {blog?.desc && <Span>{blog?.desc}</Span>}
-            </Description>
-            {blog?.link &&
-                <a href={blog?.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                Read more
-                </a>
-            }
-        </Card>
-    )
-}
 
-export default BlogCard;
+            <Description>
+                {career?.desc && <Span>{career.desc}</Span>}
+                {career?.highlights && career.highlights.length > 0 && (
+                    <Modules>
+                        {career.highlights.map((item, index) => (
+                            <Module key={index}>• {item}</Module>
+                        ))}
+                    </Modules>
+                )}
+            </Description>
+
+            {career?.link && (
+                <a
+                    href={career.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none', color: '#854CE6', fontWeight: '600', marginTop: '6px', display: 'inline-block' }}
+                >
+                    Read more
+                </a>
+            )}
+        </Card>
+    );
+};
+
+
+export default CareerCard;

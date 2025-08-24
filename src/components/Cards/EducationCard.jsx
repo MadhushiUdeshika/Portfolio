@@ -117,6 +117,18 @@ const Date = styled.div`
     }
 `
 
+const Modules = styled.div`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`
+
+const Module = styled.span`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_secondary};
+`
+
 const EducationCard = ({ education }) => {
     return (
         <Card>
@@ -130,6 +142,13 @@ const EducationCard = ({ education }) => {
             </Top>
             <Description>
                 <Span>{education.desc}</Span>
+                {education.modules && education.modules.length > 0 && (
+                    <Modules>
+                        {education.modules.map((mod, index) => (
+                            <Module key={index}>• {mod}</Module>
+                        ))}
+                    </Modules>
+                )}
             </Description>
         </Card>
     )
